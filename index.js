@@ -6,10 +6,9 @@ const express    = require( 'express' ),
 
 let app = express();
 app.set( 'view engine', 'html' );
-app.set( 'views', path.join( __dirname, 'public' ) );
+app.set( 'views', path.join( __dirname, 'public/build/default' ) );
 
-app.use( express.static( path.join( __dirname, 'src' ) ) );
-app.use( express.static( path.join( __dirname, 'bower_components/' ) ) );
+app.use( express.static( path.join( __dirname, 'public/build/default' ) ) );
 app.use( express.static( path.join( __dirname, 'node_modules' ) ) );
 
 app.use( bodyParser.urlencoded( {
